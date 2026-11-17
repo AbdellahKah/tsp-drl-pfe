@@ -1,0 +1,68 @@
+{
+  "provenance": "Paramètres déclarés dans les notebooks et manifestes d’origine; ce JSON n’est pas une preuve d’exécution.",
+  "upstream_commit": "33636039c37da190cadb5bc136162c1e3f4daf46",
+  "seeds": [
+    20261013,
+    20261014,
+    20261015
+  ],
+  "training": {
+    "n": 20,
+    "batch_size": 512,
+    "embed": 128,
+    "hidden": 128,
+    "optimizer": "Adam",
+    "initial_lr": 0.001,
+    "lr_decay": 0.96,
+    "lr_decay_step": 5000,
+    "updates": 13000,
+    "decoder": "sampling",
+    "n_glimpse": 1,
+    "n_process": 3
+  },
+  "checkpoint_selection": {
+    "suffixes": [
+      1000,
+      5000,
+      10000,
+      12999
+    ],
+    "validation_n": 20,
+    "validation_instances": 100,
+    "seed": 7302026,
+    "decoder": "greedy"
+  },
+  "test": {
+    "n": [
+      20,
+      50,
+      100
+    ],
+    "instances_per_n": 100,
+    "base_seed": 8302026,
+    "effective_seed_formula": "base_seed + n",
+    "decode_modes": [
+      "greedy",
+      "best_of_512"
+    ],
+    "sample_budget": 512
+  },
+  "baselines": {
+    "nearest_neighbor_start": 0,
+    "two_opt_max_passes": 100,
+    "aco": {
+      "ants": 15,
+      "iterations": 30,
+      "alpha": 1.0,
+      "beta": 3.0,
+      "rho": 0.1,
+      "q": 1.0
+    }
+  },
+  "paired_bootstrap": {
+    "replicates": 10000,
+    "confidence": 0.95,
+    "seed": 8802026,
+    "multiplicity_correction": false
+  }
+}

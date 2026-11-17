@@ -1,0 +1,7 @@
+# Dépendances utiles aux vérifications CPU, non environnement Colab garanti identique.
+numpy
+pandas
+torch
+matplotlib
+tqdm
+pytest
