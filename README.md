@@ -22,7 +22,7 @@ Trois entraînements indépendants à 20 villes : seeds **20261013 / 20261014 / 
 | `scripts/aggregate_multiseed_results_TORCH2110_FIXED.py` | Script final d'agrégation, conservé à l'identique. |
 | `artifacts/` | CSV et manifestes finaux v1.2, sans inventer ni recalculer les observations. |
 | `models/` | Les **trois** checkpoints acteurs sélectionnés (seeds 20261013, 20261014, 20261015), noms et SHA-256 vérifiés contre les manifestes. |
-| `thesis/` | PDF envoyé à l'encadrant et manuscrit LaTeX v1.2 distinct. |
+| `thesis/` | PDF et manuscrit LaTeX v1.2 distinct. |
 | `tests/` | Tests CPU bornés, avec source et checkpoint réels. |
 | `docs/` | Correspondance code–méthode, protocole, provenance, limites et exécution. |
 
