@@ -132,6 +132,6 @@ Pour la correspondance entre les équations et le code : [docs/IMPLEMENTATION.md
 
 ## Références
 
-Le modèle est basé sur [Rintarooo/TSP_DRL_PtrNet](https://github.com/Rintarooo/TSP_DRL_PtrNet), commit `33636039c37da190cadb5bc136162c1e3f4daf46`. Le code amont est distribué sous licence MIT, reproduite dans [THIRD_PARTY_LICENSES/Rintarooo-MIT.txt](THIRD_PARTY_LICENSES/Rintarooo-MIT.txt).
+Le modèle est basé sur [Rintarooo/TSP_DRL_PtrNet](https://github.com/Rintarooo/TSP_DRL_PtrNet).
 
 Le mémoire complet est disponible dans [thesis/submitted_main.pdf](thesis/submitted_main.pdf).
