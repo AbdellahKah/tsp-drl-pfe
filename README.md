@@ -1,9 +1,8 @@
-# TSP–DRL — dépôt d'inspection du projet de fin d'études
+# TSP–DRL — dépôt du projet de fin d'études
 
 **Mémoire :** *Apprentissage par Renforcement Profond pour l’Optimisation Combinatoire : Étude Algorithmique du Problème du Voyageur de Commerce*  
 **Auteur du mémoire :** Abdellah Kahlaoui  
 **Établissement :** Faculté des Sciences et Techniques de Settat, Université Hassan Ier.  
-**Objet de ce dépôt :** permettre à l'encadrant d'inspecter le code, les protocoles et les preuves expérimentales. Il ne s'agit **pas** de la future application de démonstration.
 
 ## Méthode étudiée
 
@@ -75,4 +74,4 @@ Les répertoires Colab complets des deux entraînements récents, leurs checkpoi
 
 À n=20, ACO donne la meilleure longueur moyenne; à n=50, la DRL dépasse NN simple mais non NN+2-opt ni ACO; à n=100, les deux décodages DRL sont moins performants que les trois baselines classiques. Les « écarts » sont relatifs au meilleur coût **observé** parmi neuf configurations, **pas** à l'optimum exact. L'écart-type inter-seeds ne doit pas être confondu avec celui calculé sur les instances. Le profil de temps v1.1 n'a pas été re-mesuré pour les deux nouvelles graines.
 
-**Attribution :** la base du modèle provient de [Rintarooo/TSP_DRL_PtrNet](https://github.com/Rintarooo/TSP_DRL_PtrNet), commit déclaré `33636039c37da190cadb5bc136162c1e3f4daf46`. Licence amont MIT; lire `NOTICE.md` et `THIRD_PARTY_LICENSES/Rintarooo-MIT.txt` avant publication. **Dépôt distant non créé; diffusion privée préconisée initialement.**
+
