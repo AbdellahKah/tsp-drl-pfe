@@ -1,0 +1,90 @@
+{
+  "project": "TSP_DRL_PtrNet clean restart",
+  "repository_url": "https://github.com/Rintarooo/TSP_DRL_PtrNet.git",
+  "commit_sha": "33636039c37da190cadb5bc136162c1e3f4daf46",
+  "run_id": "clean_restart_seed20261013_v1",
+  "train_seed": 20261013,
+  "test_seed": 4202026,
+  "n_test_instances_per_size": 100,
+  "city_sizes": [
+    20,
+    50,
+    100
+  ],
+  "train_city_count": 20,
+  "train_batch_size": 512,
+  "train_steps_target": 13000,
+  "checkpoint_every": 1000,
+  "created_at_local": "2026-10-13T17:13:48",
+  "full_run_dir": "/content/drive/MyDrive/PFE_TSP_DRL/runs/clean_restart_seed20261013_v1/full_train_n20",
+  "training_steps_configured": 13000,
+  "training_batch_size": 512,
+  "training_coordinate_tensor_estimated_gib": 0.9918212890625,
+  "actor_checkpoints": [
+    {
+      "path": "/content/drive/MyDrive/PFE_TSP_DRL/runs/clean_restart_seed20261013_v1/full_train_n20/Pt/train20_1013_17_14_step10000_act.pt",
+      "bytes": 1329965,
+      "sha256": "60b6130602371c70e270b0d94d65b69b49f52d55b3b383dcb8312037cf6468f1"
+    },
+    {
+      "path": "/content/drive/MyDrive/PFE_TSP_DRL/runs/clean_restart_seed20261013_v1/full_train_n20/Pt/train20_1013_17_14_step1000_act.pt",
+      "bytes": 1329945,
+      "sha256": "e33fd3cadf41d1e2d088a0c0dd76a47ef9c03f3c32394517cd6dc1f0634f9eda"
+    },
+    {
+      "path": "/content/drive/MyDrive/PFE_TSP_DRL/runs/clean_restart_seed20261013_v1/full_train_n20/Pt/train20_1013_17_14_step11000_act.pt",
+      "bytes": 1329965,
+      "sha256": "ef63c54a5e335fb7b3676670f70b7ccfc3bb7c600d0e593036b31aa842ad2529"
+    },
+    {
+      "path": "/content/drive/MyDrive/PFE_TSP_DRL/runs/clean_restart_seed20261013_v1/full_train_n20/Pt/train20_1013_17_14_step12000_act.pt",
+      "bytes": 1329965,
+      "sha256": "4c1fc026feff3f2cef817708b7ac9bf9698ad9d5f6311142fb45cb1d99bf5914"
+    },
+    {
+      "path": "/content/drive/MyDrive/PFE_TSP_DRL/runs/clean_restart_seed20261013_v1/full_train_n20/Pt/train20_1013_17_14_step12999_act.pt",
+      "bytes": 1329965,
+      "sha256": "87610c76c1239c32d2bdba584196a00af85a45d008d8ba3fed181a31891ee5b4"
+    },
+    {
+      "path": "/content/drive/MyDrive/PFE_TSP_DRL/runs/clean_restart_seed20261013_v1/full_train_n20/Pt/train20_1013_17_14_step2000_act.pt",
+      "bytes": 1329945,
+      "sha256": "cf030e908223a01a73be8c4318ce9b280ac69641f714d81bd1fd9dbf37ce57a1"
+    },
+    {
+      "path": "/content/drive/MyDrive/PFE_TSP_DRL/runs/clean_restart_seed20261013_v1/full_train_n20/Pt/train20_1013_17_14_step3000_act.pt",
+      "bytes": 1329945,
+      "sha256": "09c737ff95346f5b087b25e95092710e9fb08c08b9e01a09ebf8d624c8506136"
+    },
+    {
+      "path": "/content/drive/MyDrive/PFE_TSP_DRL/runs/clean_restart_seed20261013_v1/full_train_n20/Pt/train20_1013_17_14_step4000_act.pt",
+      "bytes": 1329945,
+      "sha256": "1a833624355fbede98025b6b4c1c6888149377e16f12ddfc4ec0b7e68d7ac148"
+    },
+    {
+      "path": "/content/drive/MyDrive/PFE_TSP_DRL/runs/clean_restart_seed20261013_v1/full_train_n20/Pt/train20_1013_17_14_step5000_act.pt",
+      "bytes": 1329945,
+      "sha256": "9e4bd9a7b1f072ff243d21b97071530b544e8312909e644c468ba0230409bbf0"
+    },
+    {
+      "path": "/content/drive/MyDrive/PFE_TSP_DRL/runs/clean_restart_seed20261013_v1/full_train_n20/Pt/train20_1013_17_14_step6000_act.pt",
+      "bytes": 1329945,
+      "sha256": "57e2c90db6b096f39197d60ed8685273cf74cbf92f676afd88573aca240b31c2"
+    },
+    {
+      "path": "/content/drive/MyDrive/PFE_TSP_DRL/runs/clean_restart_seed20261013_v1/full_train_n20/Pt/train20_1013_17_14_step7000_act.pt",
+      "bytes": 1329945,
+      "sha256": "1b555108458bfc8734bd1f9ae6bf840d7cfc829d121316d6ad630b919ff820cc"
+    },
+    {
+      "path": "/content/drive/MyDrive/PFE_TSP_DRL/runs/clean_restart_seed20261013_v1/full_train_n20/Pt/train20_1013_17_14_step8000_act.pt",
+      "bytes": 1329945,
+      "sha256": "d9dac92409f7393e1ee4cc5128f82488ad487dfd3ab2c3d967016ace9114ec0e"
+    },
+    {
+      "path": "/content/drive/MyDrive/PFE_TSP_DRL/runs/clean_restart_seed20261013_v1/full_train_n20/Pt/train20_1013_17_14_step9000_act.pt",
+      "bytes": 1329945,
+      "sha256": "fd38e1efb06b4c0bc9ab7958f701ae286f51ea394340eb02d6a537ab147a3a90"
+    }
+  ]
+}

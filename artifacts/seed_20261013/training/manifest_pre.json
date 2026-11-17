@@ -1,0 +1,19 @@
+{
+  "project": "TSP_DRL_PtrNet clean restart",
+  "repository_url": "https://github.com/Rintarooo/TSP_DRL_PtrNet.git",
+  "commit_sha": "33636039c37da190cadb5bc136162c1e3f4daf46",
+  "run_id": "clean_restart_seed20261013_v1",
+  "train_seed": 20261013,
+  "test_seed": 4202026,
+  "n_test_instances_per_size": 100,
+  "city_sizes": [
+    20,
+    50,
+    100
+  ],
+  "train_city_count": 20,
+  "train_batch_size": 512,
+  "train_steps_target": 13000,
+  "checkpoint_every": 1000,
+  "created_at_local": "2026-10-13T17:13:48"
+}

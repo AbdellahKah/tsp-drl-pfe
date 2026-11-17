@@ -1,0 +1,52 @@
+{
+  "evaluation_id": "TSP_DRL_Independent_Evaluation_v1_1",
+  "created_at_utc": "2026-10-13T21:33:31Z",
+  "project": "Deep reinforcement learning for the Traveling Salesperson Problem",
+  "pilot_run_id": "clean_restart_seed20261013_v1",
+  "source_repository": "https://github.com/Rintarooo/TSP_DRL_PtrNet.git",
+  "source_commit": "33636039c37da190cadb5bc136162c1e3f4daf46",
+  "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+  "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+  "pytorch": "2.11.0+cu130",
+  "cuda_runtime": "13.0",
+  "gpu": "Tesla T4",
+  "gpu_memory_gib": 14.563,
+  "validation_seed": 7302026,
+  "validation_size_n20": 100,
+  "selection_rule": "minimum mean Euclidean tour length on independent n=20 validation set under greedy decoding only",
+  "selected_checkpoint_file": "train20_1013_17_14_step12999_act.pt",
+  "selected_checkpoint_sha256": "87610c76c1239c32d2bdba584196a00af85a45d008d8ba3fed181a31891ee5b4",
+  "completed_optimizer_updates": 13000,
+  "final_test_base_seed": 8302026,
+  "final_test_seed_derivation": "effective_seed = final_test_base_seed + n",
+  "final_test_instances_per_size": 100,
+  "city_sizes": [
+    20,
+    50,
+    100
+  ],
+  "sample_budget_best_of": 512,
+  "aco": {
+    "ants": 15,
+    "iterations": 30,
+    "alpha": 1.0,
+    "beta": 3.0,
+    "rho": 0.1,
+    "q": 1.0
+  },
+  "timing": {
+    "warmups": 1,
+    "repeats": 5,
+    "instances_per_size": 10,
+    "model_loading_excluded": true,
+    "drl_includes_input_transfer_forward_scoring_and_result_retrieval": true,
+    "cpu_includes_solver_and_tour_length": true
+  },
+  "caveats": [
+    "Gap is relative to the best observed method per instance, not exact optimality.",
+    "Checkpoint selected on independent validation n=20 greedy mean only.",
+    "The selected checkpoint was frozen before final test evaluation.",
+    "One training seed only; these results do not characterize across-seed training variance.",
+    "Paired bootstrap intervals are descriptive; no multiplicity correction applied."
+  ]
+}

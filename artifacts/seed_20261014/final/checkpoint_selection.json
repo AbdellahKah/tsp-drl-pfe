@@ -1,0 +1,12 @@
+{
+  "run_id": "clean_restart_seed20261014_v1",
+  "source_commit": "33636039c37da190cadb5bc136162c1e3f4daf46",
+  "selection_rule": "minimum mean Euclidean tour length on independent n=20 validation set under greedy decoding only",
+  "validation_seed": 7302026,
+  "validation_instances": 100,
+  "selected_checkpoint_file": "train20_1025_04_27_step12999_act.pt",
+  "checkpoint_filename_suffix": 12999,
+  "completed_optimizer_updates": 13000,
+  "mean_validation_tour_length": 4.0453052969767525,
+  "validation_csv_sha256": "5add2cd184f17d377de7eef522778f2fe6311ac43083db6ea1f28c2159415641"
+}

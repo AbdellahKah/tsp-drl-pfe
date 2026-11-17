@@ -1,0 +1,19 @@
+n,drl_method,baseline_method,paired_mean_length_difference_drl_minus_baseline,bootstrap_95pct_ci_low,bootstrap_95pct_ci_high,instances,bootstrap_replicates,interpretation
+20,DRL_greedy,NN_start0,-0.46617101440152714,-0.5458451711204396,-0.38784532400396643,100,10000,negative favors DRL in mean tour length; descriptive paired CI; no multiplicity correction
+20,DRL_greedy,NN_start0_plus_2opt,0.08753964025425376,0.0515792767528477,0.12561772113525024,100,10000,negative favors DRL in mean tour length; descriptive paired CI; no multiplicity correction
+20,DRL_greedy,ACO_fixed_parameters,0.151901715669154,0.12283681802848889,0.18270591244627254,100,10000,negative favors DRL in mean tour length; descriptive paired CI; no multiplicity correction
+20,DRL_best_of_512,NN_start0,-0.5329037109298556,-0.6115435453902038,-0.4572410546061604,100,10000,negative favors DRL in mean tour length; descriptive paired CI; no multiplicity correction
+20,DRL_best_of_512,NN_start0_plus_2opt,0.020806943725925488,-0.012601554968428423,0.05376475702121554,100,10000,negative favors DRL in mean tour length; descriptive paired CI; no multiplicity correction
+20,DRL_best_of_512,ACO_fixed_parameters,0.08516901914082574,0.06093666076927942,0.11150054309965572,100,10000,negative favors DRL in mean tour length; descriptive paired CI; no multiplicity correction
+50,DRL_greedy,NN_start0,-0.31345047747951055,-0.41065030704780403,-0.21775340267690632,100,10000,negative favors DRL in mean tour length; descriptive paired CI; no multiplicity correction
+50,DRL_greedy,NN_start0_plus_2opt,0.6596766276767447,0.5956797626224779,0.7234193028901398,100,10000,negative favors DRL in mean tour length; descriptive paired CI; no multiplicity correction
+50,DRL_greedy,ACO_fixed_parameters,0.47402797053376333,0.4120824554934191,0.5373297277281474,100,10000,negative favors DRL in mean tour length; descriptive paired CI; no multiplicity correction
+50,DRL_best_of_512,NN_start0,-0.6085921425952736,-0.7044733148374931,-0.51422240301638,100,10000,negative favors DRL in mean tour length; descriptive paired CI; no multiplicity correction
+50,DRL_best_of_512,NN_start0_plus_2opt,0.3645349625609818,0.30886137195530833,0.4193205265154557,100,10000,negative favors DRL in mean tour length; descriptive paired CI; no multiplicity correction
+50,DRL_best_of_512,ACO_fixed_parameters,0.1788863054180004,0.1257168210868103,0.23414857945456988,100,10000,negative favors DRL in mean tour length; descriptive paired CI; no multiplicity correction
+100,DRL_greedy,NN_start0,0.6582672671531228,0.5416929408209031,0.7748052163724461,100,10000,negative favors DRL in mean tour length; descriptive paired CI; no multiplicity correction
+100,DRL_greedy,NN_start0_plus_2opt,2.126573070276134,2.0463399870327454,2.206776693717036,100,10000,negative favors DRL in mean tour length; descriptive paired CI; no multiplicity correction
+100,DRL_greedy,ACO_fixed_parameters,1.2364754453244546,1.1501699880443832,1.3263039090863287,100,10000,negative favors DRL in mean tour length; descriptive paired CI; no multiplicity correction
+100,DRL_best_of_512,NN_start0,0.14169878830965155,0.03279007498864638,0.24695968552473443,100,10000,negative favors DRL in mean tour length; descriptive paired CI; no multiplicity correction
+100,DRL_best_of_512,NN_start0_plus_2opt,1.6100045914326628,1.5400386075648833,1.6805700739735543,100,10000,negative favors DRL in mean tour length; descriptive paired CI; no multiplicity correction
+100,DRL_best_of_512,ACO_fixed_parameters,0.7199069664809832,0.6457714835159876,0.7966843601301,100,10000,negative favors DRL in mean tour length; descriptive paired CI; no multiplicity correction

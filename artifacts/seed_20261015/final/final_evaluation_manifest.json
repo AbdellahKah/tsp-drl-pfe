@@ -1,0 +1,58 @@
+{
+  "evaluation_id": "TSP_DRL_Independent_Evaluation_seed20261015_torch2110_v1_2",
+  "created_at_utc": "2026-11-15T19:16:33Z",
+  "project": "Deep reinforcement learning for the Traveling Salesperson Problem",
+  "training_run_id": "clean_restart_seed20261015_v1",
+  "training_seed": 20261015,
+  "source_repository": "https://github.com/Rintarooo/TSP_DRL_PtrNet.git",
+  "source_commit": "33636039c37da190cadb5bc136162c1e3f4daf46",
+  "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+  "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+  "pytorch": "2.11.0+cu130",
+  "cuda_runtime": "13.0",
+  "gpu": "Tesla T4",
+  "gpu_memory_gib": 14.563,
+  "validation_seed": 7302026,
+  "validation_size_n20": 100,
+  "selection_rule": "minimum mean Euclidean tour length on independent n=20 validation set under greedy decoding only",
+  "selected_checkpoint_file": "train20_1025_04_56_step12999_act.pt",
+  "selected_checkpoint_sha256": "0dbaaecc56baf013b411aae1bb3e69982682a49c3d314c9a7f0dedbb4b11284d",
+  "completed_optimizer_updates": 13000,
+  "final_test_base_seed": 8302026,
+  "final_test_seed_derivation": "effective_seed = final_test_base_seed + n",
+  "final_test_instances_per_size": 100,
+  "city_sizes": [
+    20,
+    50,
+    100
+  ],
+  "sample_budget_best_of": 512,
+  "aco": {
+    "ants": 15,
+    "iterations": 30,
+    "alpha": 1.0,
+    "beta": 3.0,
+    "rho": 0.1,
+    "q": 1.0
+  },
+  "timing": {
+    "reused_from_evaluation": "final_evaluation_v1_1",
+    "runtime_profile_file": "runtime_profile_reused_from_v1_1.csv",
+    "runtime_summary_file": "runtime_profile_summary_reused_from_v1_1.csv",
+    "remeasured_for_this_training_seed": false,
+    "timing_was_originally_measured_for_training_seed": 20261013,
+    "original_warmups": 1,
+    "original_repeats": 5,
+    "original_instances_per_size": 10,
+    "model_loading_excluded": true,
+    "drl_includes_input_transfer_forward_scoring_and_result_retrieval": true,
+    "cpu_includes_solver_and_tour_length": true
+  },
+  "caveats": [
+    "Gap is relative to the best observed method per instance, not exact optimality.",
+    "Checkpoint selected on independent validation n=20 greedy mean only.",
+    "The selected checkpoint was frozen before final test evaluation.",
+    "This folder evaluates one training seed only; aggregate its results with the other predeclared seeds to estimate between-seed variability.",
+    "Paired bootstrap intervals are descriptive; no multiplicity correction applied."
+  ]
+}

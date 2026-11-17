@@ -1,0 +1,88 @@
+{
+  "aggregation_id": "final_evaluation_multi_seed_v1_2",
+  "created_at_local": "2026-11-15T19:30:57.147693",
+  "project_root": "/content/drive/MyDrive/PFE_TSP_DRL",
+  "training_runs": [
+    {
+      "evaluation_folder": "final_evaluation_v1_1",
+      "training_run_id": "clean_restart_seed20261013_v1",
+      "training_seed": 20261013,
+      "selected_checkpoint_file": "train20_1013_17_14_step12999_act.pt",
+      "selected_checkpoint_sha256": "87610c76c1239c32d2bdba584196a00af85a45d008d8ba3fed181a31891ee5b4",
+      "completed_optimizer_updates": 13000
+    },
+    {
+      "evaluation_folder": "final_evaluation_seed20261014_v1_2",
+      "training_run_id": "clean_restart_seed20261014_v1",
+      "training_seed": 20261014,
+      "selected_checkpoint_file": "train20_1025_04_27_step12999_act.pt",
+      "selected_checkpoint_sha256": "ed20ed5d06b3dbaaea666cd96b64ba43fb4f9cfa543927c6999061297cc47e4e",
+      "completed_optimizer_updates": 13000
+    },
+    {
+      "evaluation_folder": "final_evaluation_seed20261015_torch2110_v1_2",
+      "training_run_id": "clean_restart_seed20261015_v1",
+      "training_seed": 20261015,
+      "selected_checkpoint_file": "train20_1025_04_56_step12999_act.pt",
+      "selected_checkpoint_sha256": "0dbaaecc56baf013b411aae1bb3e69982682a49c3d314c9a7f0dedbb4b11284d",
+      "completed_optimizer_updates": 13000
+    }
+  ],
+  "validation_seed": 7302026,
+  "final_test_base_seed": 8302026,
+  "final_test_effective_seed_rule": "8302026 + n",
+  "instances_per_size": 100,
+  "city_sizes": [
+    20,
+    50,
+    100
+  ],
+  "final_test_coordinate_sha256_by_n": {
+    "20": "61eb25e7b1a2fb40d0c487c28924dce91750f4793d997b042e3ce41ce5e5e786",
+    "50": "8d96fe56bdc2ab2ec5bb5bbe535754a7cb382f1345298fcabae7dab861dc9481",
+    "100": "4349eb4a036b30068a061f2046557cf346c789d02f48f440c4c15bf43ffe1b1e"
+  },
+  "training_seeds": [
+    20261013,
+    20261014,
+    20261015
+  ],
+  "inference_environment": [
+    {
+      "evaluation_folder": "final_evaluation_v1_1",
+      "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+      "pytorch": "2.11.0+cu130",
+      "cuda_runtime": "13.0",
+      "gpu": "Tesla T4"
+    },
+    {
+      "evaluation_folder": "final_evaluation_seed20261014_v1_2",
+      "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+      "pytorch": "2.11.0+cu130",
+      "cuda_runtime": "13.0",
+      "gpu": "Tesla T4"
+    },
+    {
+      "evaluation_folder": "final_evaluation_seed20261015_torch2110_v1_2",
+      "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+      "pytorch": "2.11.0+cu130",
+      "cuda_runtime": "13.0",
+      "gpu": "Tesla T4"
+    }
+  ],
+  "bootstrap_replicates": 10000,
+  "notes": [
+    "Validation and final-test coordinate arrays were checked to be identical across all three evaluation folders.",
+    "Classical baseline tours and lengths were checked for exact agreement across folders and included only once.",
+    "Best-observed reference is the minimum across all included baseline methods, seed-specific DRL checkpoints and decoding modes; it is not an exact optimum.",
+    "Between-seed standard deviation is the sample SD of three seed-level mean tour lengths; descriptive, not a reliable population variance estimate.",
+    "Paired bootstrap intervals quantify instance-level uncertainty conditional on each fixed trained model; they do not replace between-seed analysis."
+  ],
+  "outputs": [
+    "multiseed_combined_per_instance.csv",
+    "multiseed_per_seed_summary.csv",
+    "multiseed_across_seed_summary.csv",
+    "multiseed_paired_bootstrap_by_seed.csv",
+    "multiseed_selected_checkpoints.csv"
+  ]
+}

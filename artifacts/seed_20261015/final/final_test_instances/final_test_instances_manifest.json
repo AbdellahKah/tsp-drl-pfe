@@ -1,0 +1,42 @@
+{
+  "purpose": "fresh final test; generated after validation-only checkpoint selection",
+  "final_test_base_seed": 8302026,
+  "effective_seed_rule": "effective_seed = final_test_base_seed + n",
+  "instances_per_size": 100,
+  "distribution": "independent uniform coordinates in [0,1]^2, float32 storage",
+  "city_sizes": {
+    "20": {
+      "shape": [
+        100,
+        20,
+        2
+      ],
+      "file": "final_test_n20_seed8302046_count100.npz",
+      "effective_seed": 8302046,
+      "sha256": "5adea2b283f95064a69f92117b48688404b482499638272511370bb8265adaa5"
+    },
+    "50": {
+      "shape": [
+        100,
+        50,
+        2
+      ],
+      "file": "final_test_n50_seed8302076_count100.npz",
+      "effective_seed": 8302076,
+      "sha256": "73a3331e6b28469f7077e98a8f6b8b4ca06464f0b345e2a28257067ae046c05d"
+    },
+    "100": {
+      "shape": [
+        100,
+        100,
+        2
+      ],
+      "file": "final_test_n100_seed8302126_count100.npz",
+      "effective_seed": 8302126,
+      "sha256": "c77a36e852219eb8bdf6286f2d2a6c5d7229fd894ccdd6409ec3d2bc232b16f1"
+    }
+  },
+  "validation_seed": 7302026,
+  "training_run_id": "clean_restart_seed20261015_v1",
+  "training_seed": 20261015
+}

@@ -1,0 +1,16 @@
+n,method,n_training_seeds,mean_of_seed_level_means,sd_between_training_seed_means,minimum_seed_level_mean,maximum_seed_level_mean,interpretation
+20,DRL_greedy,3,4.035502009521323,0.005155626731043978,4.029920152643068,4.0400853224986735,descriptive variability across independently trained models; only three seeds
+20,DRL_best_of_512,3,3.9583651320900266,0.005353796728766397,3.952604039830119,3.9631874561147398,descriptive variability across independently trained models; only three seeds
+20,NN_start0,0,4.496091167044595,,4.496091167044595,4.496091167044595,single shared baseline evaluated on the same 100 instances; SD shown in per-seed summary is across instances
+20,NN_start0_plus_2opt,0,3.942380512388814,,3.942380512388814,3.942380512388814,single shared baseline evaluated on the same 100 instances; SD shown in per-seed summary is across instances
+20,ACO_fixed_parameters,0,3.8780184369739135,,3.8780184369739135,3.8780184369739135,single shared baseline evaluated on the same 100 instances; SD shown in per-seed summary is across instances
+50,DRL_greedy,3,6.64033730211354,0.028146204101870038,6.618153996983159,6.671999188888954,descriptive variability across independently trained models; only three seeds
+50,DRL_best_of_512,3,6.329445130196599,0.020939690919355256,6.306086213533503,6.346532121703547,descriptive variability across independently trained models; only three seeds
+50,NN_start0,0,6.944309197948019,,6.944309197948019,6.944309197948019,single shared baseline evaluated on the same 100 instances; SD shown in per-seed summary is across instances
+50,NN_start0_plus_2opt,0,5.971182092791764,,5.971182092791764,5.971182092791764,single shared baseline evaluated on the same 100 instances; SD shown in per-seed summary is across instances
+50,ACO_fixed_parameters,0,6.156830749934745,,6.156830749934745,6.156830749934745,single shared baseline evaluated on the same 100 instances; SD shown in per-seed summary is across instances
+100,DRL_greedy,3,10.437334674344626,0.03644575638353917,10.397097723461702,10.468131819932793,descriptive variability across independently trained models; only three seeds
+100,DRL_best_of_512,3,9.894556708585032,0.02929338809041725,9.874914760558145,9.92822612057872,descriptive variability across independently trained models; only three seeds
+100,NN_start0,0,9.73883045630858,,9.73883045630858,9.73883045630858,single shared baseline evaluated on the same 100 instances; SD shown in per-seed summary is across instances
+100,NN_start0_plus_2opt,0,8.270524653185568,,8.270524653185568,8.270524653185568,single shared baseline evaluated on the same 100 instances; SD shown in per-seed summary is across instances
+100,ACO_fixed_parameters,0,9.160622278137247,,9.160622278137247,9.160622278137247,single shared baseline evaluated on the same 100 instances; SD shown in per-seed summary is across instances
