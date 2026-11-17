@@ -22,7 +22,7 @@ Trois entraînements indépendants à 20 villes : seeds **20261013 / 20261014 / 
 | `scripts/quick_inference.py` | Adaptateur local de vérification avec le véritable acteur et le checkpoint inclus; ce n'est pas une reproduction de toutes les expériences. |
 | `scripts/aggregate_multiseed_results_TORCH2110_FIXED.py` | Script final d'agrégation, conservé à l'identique. |
 | `artifacts/` | CSV et manifestes finaux v1.2, sans inventer ni recalculer les observations. |
-| `models/` | Checkpoint sélectionné de la seed 20261013, SHA-256 vérifié. |
+| `models/` | Les **trois** checkpoints acteurs sélectionnés (seeds 20261013, 20261014, 20261015), noms et SHA-256 vérifiés contre les manifestes. |
 | `thesis/` | PDF envoyé à l'encadrant et manuscrit LaTeX v1.2 distinct. |
 | `tests/` | Tests CPU bornés, avec source et checkpoint réels. |
 | `docs/` | Correspondance code–méthode, protocole, provenance, limites et exécution. |
@@ -34,6 +34,7 @@ Dans un environnement Python avec PyTorch CPU :
 ```bash
 python -m pip install -r requirements.txt
 python -m pytest -q
+python scripts/verify_checkpoints.py
 python scripts/quick_inference.py --n 20 --decode greedy --device cpu
 python scripts/quick_inference.py --n 50 --decode greedy --device cpu
 python scripts/quick_inference.py --n 100 --decode greedy --device cpu
@@ -47,13 +48,28 @@ python scripts/quick_inference.py --n 20 --decode best-of-512 --sample-count 3
 
 Le budget officiel de l'expérience est `--sample-count 512`. Une exécution avec 3 échantillons ne reproduit **aucun résultat chiffré du mémoire**; elle valide uniquement le chemin de code.
 
-## Disponibilité des modèles
+## Disponibilité des modèles — trois seeds vérifiées
 
-Le fichier `models/seed_20261013/train20_1013_17_14_step12999_act.pt` a le SHA-256 :
+Les trois poids acteurs sélectionnés sont inclus sans modification. Les empreintes SHA-256 ont été recalculées sur les fichiers binaires et comparées à `artifacts/aggregation/multiseed_selected_checkpoints.csv` :
 
-`87610c76c1239c32d2bdba584196a00af85a45d008d8ba3fed181a31891ee5b4`.
+| Seed | Fichier dans `models/seed_<seed>/` | SHA-256 vérifié |
+|---|---|---|
+| 20261013 | `train20_1013_17_14_step12999_act.pt` | `87610c76c1239c32d2bdba584196a00af85a45d008d8ba3fed181a31891ee5b4` |
+| 20261014 | `train20_1025_04_27_step12999_act.pt` | `ed20ed5d06b3dbaaea666cd96b64ba43fb4f9cfa543927c6999061297cc47e4e` |
+| 20261015 | `train20_1025_04_56_step12999_act.pt` | `0dbaaecc56baf013b411aae1bb3e69982682a49c3d314c9a7f0dedbb4b11284d` |
 
-Les poids sélectionnés des seeds **20261014** et **20261015** sont **absents** de la livraison. Leurs noms, hashes et métriques sont documentés dans les manifestes; il serait faux de dire que les trois modèles sont exécutables localement. Il faut récupérer les poids d'origine pour refaire leurs inférences. 
+Contrôle indépendant sans PyTorch : `python scripts/verify_checkpoints.py`.
+
+Pour inspecter **une instance** avec une autre seed, fournir explicitement `--checkpoint` :
+
+```bash
+python scripts/quick_inference.py --n 20 --decode greedy --checkpoint models/seed_20261014/train20_1025_04_27_step12999_act.pt
+python scripts/quick_inference.py --n 100 --decode greedy --checkpoint models/seed_20261015/train20_1025_04_56_step12999_act.pt
+```
+
+La CLI utilise par défaut les poids de la seed 20261013. Les trois checkpoints se chargent avec les 20 mêmes clés et dimensions de tenseurs; ils possèdent des poids appris distincts. Les tests CPU ont confirmé des permutations valides pour n=20/50/100 et le chemin de sampling limité (3 candidats). **Cela ne reproduit pas les moyennes des 100 instances ni le benchmark Best-of-512** du mémoire.
+
+Les répertoires Colab complets des deux entraînements récents, leurs checkpoints intermédiaires et certains manifestes de travail restent hors du dépôt; ne pas les confondre avec les trois checkpoints sélectionnés, désormais présents.
 
 ## Résultats : limites d'interprétation
 

@@ -9,7 +9,7 @@
 | Architecture initiale | `code_snapshot/{actor,critic,env,data,config,train,test,search}.py` | Fichiers du workspace historique disponibles dans la livraison | `train.py` déjà modifié; identité parfaite avec Git à commit fixe non indépendante |
 | Écart expérimental | `experiment_patch/training_patch.diff` | Changements déclarés pour le budget fixe, checkpoints et seeds | Patch inversable; pas de diff direct Git amont faute d'accès remote |
 | Exécution seed 20261013 | `notebooks/seed_20261013_training_and_pilot.ipynb`, manifests et `models/` | Protocole, fichier acteur sélectionné, hash vérifié | Entraînement intégral non reproduit |
-| Exécution seeds 20261014/15 | `notebooks/multiseed_training_v1_2.ipynb` | Orchestration Colab, paramètres et patch d'entraînement | Poids sélectionnés absents du ZIP |
+| Exécution seeds 20261014/15 | `notebooks/multiseed_training_v1_2.ipynb`, `models/seed_20261014/`, `models/seed_20261015/` | Orchestration Colab, paramètres et deux poids d’origine ajoutés ensuite, SHA-256 vérifiés | Journaux Drive complets non fournis |
 | Validation et comparaison | `notebooks/seed_20261013_evaluation_v1_1.ipynb`, `notebooks/seed_20261014_evaluation_v1_2.ipynb`, `notebooks/seed_20261015_evaluation_corrected_torch2110_v1_2.ipynb` | Décodage, baseline, tests et bootstrap prévus | Dossiers Colab d'origine non disponibles intégralement |
 | Résultats rapportés | `artifacts/aggregation/`, `artifacts/seed_*/final/` | Données multiseed finalisées, journaux de sélection, métadonnées de l'évaluation | Présence des résultats ≠ présence des trois poids |
 | Statistiques finales | `scripts/aggregate_multiseed_results_TORCH2110_FIXED.py` | Dernière logique d'agrégation fournie | Ancien script sous `scripts/superseded` non retenu |
@@ -32,11 +32,11 @@
 
 - Intégrité du bundle : 111/111 empreintes enregistrées dans `MANIFEST_SHA256.txt` vérifiées.
 - Sept notebooks source : JSON valide, toutes les cellules de code compilables, aucune sortie d'exécution incorporée.
-- SHA-256 du checkpoint sélectionné 20261013 : conforme à l'enregistrement.
+- SHA-256 des trois checkpoints sélectionnés (20261013/14/15) : conformes aux enregistrements du manifeste. Les deux nouveaux fichiers ont été ajoutés sans modification binaire. Structures des `state_dict` vérifiées (20 tenseurs et mêmes formes).
 - Vérification des 2 700 tournées archivées : permutations valides et longueurs euclidiennes recalculées depuis les graines de génération exactes, tolérance `1e-6`, sans discordance.
 - Moyennes et écarts-types DRL inter-seeds : accord aux valeurs des CSV agrégés.
 - Modules sources copiés octet pour octet depuis le bundle; fonctions NN, 2-opt, ACO extraites textuellement de la cellule 2 du notebook d'évaluation corrigé et testées contre l'exécution des fonctions de la cellule d'origine.
-- Tests CPU et smoke inference : voir `tests/`; aucun entraînement de 13 000 pas ni sweep officiel de 512 échantillons exécuté.
+- Tests CPU et smoke inference : **23 tests réussis** (PyTorch 2.10.0+cpu local), Greedy n=20/50/100 pour chaque seed, sampling limité à 3 tirages. Aucun entraînement de 13 000 pas ni sweep officiel de 512 échantillons exécuté.
 
 ## Plans / autorisations
 

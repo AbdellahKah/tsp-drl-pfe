@@ -13,14 +13,14 @@
 ## Contrôles documentés lors de l'assemblage
 
 - Bundle : 111/111 éléments décrits dans la liste SHA-256 vérifiés.
-- Checkpoint actor seed-13 : `87610c76c1239c32d2bdba584196a00af85a45d008d8ba3fed181a31891ee5b4`, calculé et égal au manifeste.
+- Les **trois** checkpoints acteurs sélectionnés : SHA-256 vérifiés contre `artifacts/aggregation/multiseed_selected_checkpoints.csv` (seed-13 : `87610c76c1239c32d2bdba584196a00af85a45d008d8ba3fed181a31891ee5b4` ; seed-14 : `ed20ed5d06b3dbaaea666cd96b64ba43fb4f9cfa543927c6999061297cc47e4e` ; seed-15 : `0dbaaecc56baf013b411aae1bb3e69982682a49c3d314c9a7f0dedbb4b11284d`). Les deux derniers fichiers binaires proviennent de l'archive ajoutée `PFE_Missing_Selected_Checkpoints.zip` ; les originaux ont été conservés octet pour octet.
+- Les trois fichiers contiennent des state_dicts PyTorch chargés avec `weights_only=True` sur CPU : 20 tenseurs chacun, formes et clés identiques, poids distincts. Greedy validé à 20/50/100 villes pour les trois; sampling contrôlé avec seulement 3 tirages par instance, sans réexécuter Best-of-512 officiel.
 - 7 notebooks top-level extraits : JSON et compilation des cellules Python vérifiés; zéro sortie exécutée enregistrée. Une copie identique seed-14 était répétée dans deux emplacements.
 - Licence du dépôt amont sur GitHub (`master`) : MIT, copyright 2020 Rintarooo. **Vérification Git locale du commit exact non effectuée**, la résolution de `github.com` étant indisponible dans ce runtime.
 
-## Fichiers manquants
+## Fichiers / éléments toujours manquants
 
-- Checkpoint acteur seed-20261014 : `train20_1025_04_27_step12999_act.pt`, SHA-256 attendu `ed20ed5d06b3dbaaea666cd96b64ba43fb4f9cfa543927c6999061297cc47e4e`.
-- Checkpoint acteur seed-20261015 : `train20_1025_04_56_step12999_act.pt`, SHA-256 attendu `0dbaaecc56baf013b411aae1bb3e69982682a49c3d314c9a7f0dedbb4b11284d`.
+- **Aucun** des trois checkpoints acteurs **sélectionnés** n'est manquant. Les checkpoints intermédiaires non sélectionnés ne sont pas tous conservés.
 - Dossiers originaux de travail de ces deux runs : manifests d'entraînement complets et checkpoints intermédiaires non intégrés au bundle.
 - Accès à un remote GitHub : aucun dépôt créé/poussé; ne pas conclure que l'encadrant y a accès.
 
